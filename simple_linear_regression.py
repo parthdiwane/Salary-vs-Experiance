@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # reading the data 
-dataset = pd.read_csv('regression/salary_data.csv')
+dataset = pd.read_csv('salary_data.csv')
 indep = dataset.iloc[:, :-1].values
 dep = dataset.iloc[:,-1].values
 
