@@ -1,10 +1,11 @@
 # importing needed libraries 
+from ast import Break
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
 # reading the data 
-dataset = pd.read_csv('salary_data.csv')
+dataset = pd.read_csv('Salary_Data.csv')
 indep = dataset.iloc[:, :-1].values
 dep = dataset.iloc[:,-1].values
 
@@ -38,3 +39,13 @@ plt.title('Salary vs Experiance (Test Set)')
 plt.xlabel('Years of Experiance')
 plt.ylabel('Salary')
 plt.show()
+
+# prints the salary from user given value 
+inp = input("\n type 'exit' to quit \n Please enter a number: ")
+v1 = int(inp)
+num = str(regressor.predict([[v1]]))
+if(inp != "exit"):
+    print(" The salary after " + inp + " years is: " + num)
+else:
+    print("goodbye")
+    Break
